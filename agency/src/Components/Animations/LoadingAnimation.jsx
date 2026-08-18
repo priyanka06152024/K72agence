@@ -1,57 +1,72 @@
-import react,{useRef} from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
+import { useLocation } from "react-router-dom";
 
-const LoadingAnimation =()=>{
+const LoadingAnimation = (props) => {
+  const currentPath = useLocation().pathname;
+
   const ParentRef = useRef(null);
-    useGSAP(() => {
-  const t = gsap.timeline();
+  const pageRef = useRef(null);
 
-  t.to("ParentRef.current",{
-   display:"block"
-  })
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
-  t.from(".loading-animation", {
-    height: 0,
-    duration: 0.8,
-    stagger: {
-      amount: -0.25,
-     
-    },
-    // ease: "power4.inOut"
-  });
+    // Loader show
+    tl.set(ParentRef.current, {
+      display: "block",
+    });
 
-  t.to(".loading-animation", {
-    y: "100%",
-    duration: 0.8,
-    stagger: {
-      amount: -0.25,
-        
-     
-    },
-    // ease: "power4.inOut"
-  });
+    // Black divs appear
+    tl.from(".loading-animation", {
+      height: 0,
+      stagger: {
+        amount: -0.2,
+      },
+    });
 
-   t.to("ParentRef.current",{
-   display:"none"
-  })
-});
-return(
-     <div className="h-screen w-full  fixed top-0 z-20">
-      <div className=" w-full h-full flex">
-      <div className="loading-animation h-full w-1/5 bg-black">
+    // Black divs move down
+    tl.to(".loading-animation", {
+      y: "100%",
+      stagger: {
+        amount: -0.25,
+      },
+    });
+
+    // Loader hide
+    tl.to(ParentRef.current, {
+      display: "none",
+    });
+
+    tl.to(".loading-animation", {
+      y: "0%",
+    });
+
+    // Page animation
+    gsap.from(pageRef.current, {
+      opacity: 0,
+      delay: 1,
+      scale: 1.2,
+    });
+  }, [currentPath]);
+
+  return (
+    <>
+      {/* LOADER */}
+      <div ref={ParentRef} className="h-screen w-full fixed top-0 left-0 z-20">
+        <div className="w-full h-full flex">
+          <div className="loading-animation h-full w-1/5 bg-black"></div>
+          <div className="loading-animation h-full w-1/5 bg-black"></div>
+          <div className="loading-animation h-full w-1/5 bg-black"></div>
+          <div className="loading-animation h-full w-1/5 bg-black"></div>
+          <div className="loading-animation h-full w-1/5 bg-black"></div>
+        </div>
       </div>
-      <div className="loading-animation h-full w-1/5 bg-black">
-      </div>
-      <div className="loading-animation h-full w-1/5 bg-black">
-      </div>
-      <div className="loading-animation h-full w-1/5 bg-black">
-      </div>
-      <div className="loading-animation h-full w-1/5 bg-black">
-      </div>
-    </div>
-     </div>
-)
-}
+
+      {/* PAGE */}
+      <div ref={pageRef}>{props.children}</div>
+    </>
+  );
+};
 
 export default LoadingAnimation;
