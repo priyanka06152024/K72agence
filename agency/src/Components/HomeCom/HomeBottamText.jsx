@@ -7,7 +7,7 @@ const HomeBottamText = () => {
       
       <Link
         className="text-[6vw] hover:text-[#D3FD50] border-[5px] hover:border-[#D3FD50] px-8 rounded-full"
-        to="/Project"
+        to="/Projects"
       >
         PROJECTS
       </Link>

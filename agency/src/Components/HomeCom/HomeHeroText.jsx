@@ -1,6 +1,6 @@
 import React from "react";
-import Video from "./Video";
-import HomeVideo from "../../assets/HomeSrc/HomeVideo.mp4";
+import Video from "./video";
+import HomeVideo from "../../assets/HomeSrc/video.mp4";
 
 const HomeHeroText = () => {
   return (

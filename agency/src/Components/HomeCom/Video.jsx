@@ -1,4 +1,4 @@
-import HomeVideo from "../../assets/HomeSrc/HomeVideo.mp4";
+import HomeVideo from "../../assets/HomeSrc/video.mp4";
 
 const Video = () => {
   return (
