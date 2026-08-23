@@ -1,3 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 @import "tailwindcss";
+
+.moveX {
+  display: flex;
+  width: max-content;
+  animation: moveAnimation 5s linear infinite;
+}
+
+@keyframes moveAnimation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

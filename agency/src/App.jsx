@@ -4,6 +4,7 @@ import Agence from "./Pages/Agence";
 import Projects from "./Pages/Projects";
 import "./App.css";
 import Navbar from "./Components/Navigation/Navbar";
+import Menu from "./Components/Navigation/Menu";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
    <Navbar />
+   {/* <Menu /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Agence" element={<Agence />} />
