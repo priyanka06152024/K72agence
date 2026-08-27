@@ -14,6 +14,8 @@ const Projects = () => {
     { image1: Image1, image2: Image1 },
     { image1: Image1, image2: Image1 },
     { image1: Image1, image2: Image1 },
+    
+    
   ];
     gsap.registerPlugin(ScrollTrigger)
 
@@ -27,11 +29,12 @@ const Projects = () => {
         trigger: '.lol',
         start: 'top 100%',
         end: 'top -150%',
-        scrub: true
+        scrub: true,
+       
       }
     })
   })
-  // useGSAP(
+  
   //   () => {
   //     const heroes = gsap.utils.toArray(".hero");
 
@@ -82,7 +85,7 @@ const Projects = () => {
   //   { scope: container },
   // );
   return (
-    <div className='lg:p-4 p-2 mb-[100vh]'>
+    <div className='lg:p-4 p-2 mb-[100vh] h-screen'>
       <div className=' pt-[45vh]'>
         <h2 className="font-['DM_Sans'] lg:text-[12vw] text-7xl uppercase">Projets</h2>
       </div>
