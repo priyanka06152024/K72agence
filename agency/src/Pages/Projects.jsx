@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import ProjectCard from "../Components/ProjectCom/ProjectCard";
+import Footer from "../Components/Footer/Footer.jsx"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image1 from "../assets/ProjectsSrc/projectimag.png";
@@ -85,6 +86,7 @@ const Projects = () => {
   //   { scope: container },
   // );
   return (
+    <>
     <div className='lg:p-4 p-2 mb-[100vh] h-screen'>
       <div className=' pt-[45vh]'>
         <h2 className="font-['DM_Sans'] lg:text-[12vw] text-7xl uppercase">Projets</h2>
@@ -97,7 +99,13 @@ const Projects = () => {
         })}
 
       </div>
+
+      <Footer />
+     
     </div>
+
+    
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const ProjectCard = (props) => {
     return (
         <>
@@ -15,7 +16,8 @@ const ProjectCard = (props) => {
                     <h2 className='uppercase text-6xl font-[font1] border-4 pt-4 px-8 text-white border-white rounded-full '>Vior le projet</h2>
                 </div>
             </div>
-
+           
+           
             
         </>
     )

@@ -7,6 +7,7 @@ import Navbar from "./Components/Navigation/Navbar";
 import Menu from "./Components/Navigation/Menu";
 
 
+
 function App() {
 
   return (
@@ -18,7 +19,9 @@ function App() {
         <Route path="/Agence" element={<Agence />} />
           <Route path="/Projects" element={<Projects />} />
       </Routes>
+   
     </>
+    
   );
 }
 

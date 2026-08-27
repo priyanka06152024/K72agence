@@ -1,9 +1,7 @@
-
-
-
 import AgenceHero from "../Components/AgenceCom/AgenceHero";
 import AgenceMiddle from "../Components/AgenceCom/AgenceMiddle";
 import AgenceBottom from "../Components/AgenceCom/AgenceBottom";
+import Footer from "../Components/Footer/Footer.jsx";
 
 const Agence = () => {
   return (
@@ -11,6 +9,7 @@ const Agence = () => {
       <AgenceHero />
       <AgenceMiddle />
       <AgenceBottom />
+      <Footer />
     </main>
   );
 };

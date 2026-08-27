@@ -1,4 +1,3 @@
-
 import AgenceImg1 from "../../assets/AgenceSrc/AgenceImg1.jpg";
 import AgenceImg2 from "../../assets/AgenceSrc/AgenceImg2.jpg";
 import AgenceImg3 from "../../assets/AgenceSrc/AgenceImg3.jpg";
@@ -7,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,16 +63,15 @@ const AgenceBottom = () => {
     },
     {
       scope: sectionRef,
-    }
+    },
   );
 
   return (
     <section
       ref={sectionRef}
-      className="relative h-[800vh] w-full font-['DM_Sans']"
+      className="relative h-[1000vh] w-full font-['DM_Sans']"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-
         <div className="agence-slide group absolute inset-0 z-10 overflow-hidden">
           <img
             src={AgenceImg1}
@@ -87,9 +86,7 @@ const AgenceBottom = () => {
               voir tous les projects
             </h3>
 
-            <h2 className="mt-38 text-[2.5vw] font-semibold">
-              Opto Reseau
-            </h2>
+            <h2 className="mt-38 text-[2.5vw] font-semibold">Opto Reseau</h2>
 
             <h1 className="mt-6 text-[5.5vw] font-semibold group-hover:underline">
               On Vous Voit Comme Personne
@@ -107,9 +104,7 @@ const AgenceBottom = () => {
           <div className="absolute inset-0 bg-black/10" />
 
           <div className="relative z-10 flex h-full w-full flex-col items-center text-white">
-            <h2 className="mt-38 text-[2.5vw] font-semibold">
-              Lamajeure
-            </h2>
+            <h2 className="mt-38 text-[2.5vw] font-semibold">Lamajeure</h2>
 
             <h1 className="mt-6 text-[5.5vw] font-semibold group-hover:underline">
               Lamajeure
@@ -127,9 +122,7 @@ const AgenceBottom = () => {
           <div className="absolute inset-0 bg-black/10" />
 
           <div className="relative z-10 flex h-full w-full flex-col items-center text-white">
-            <h2 className="mt-38 text-[2.5vw] font-semibold">
-              Lassonde
-            </h2>
+            <h2 className="mt-38 text-[2.5vw] font-semibold">Lassonde</h2>
 
             <h1 className="mt-6 text-[5.5vw] font-semibold group-hover:underline">
               Fruite
@@ -137,7 +130,9 @@ const AgenceBottom = () => {
           </div>
         </div>
 
+        
       </div>
+
     </section>
   );
 };
