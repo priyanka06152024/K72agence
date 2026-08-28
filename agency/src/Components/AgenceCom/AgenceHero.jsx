@@ -15,6 +15,7 @@ import Image6 from "../../assets/AgenceSrc/k76.jpg";
 import Image7 from "../../assets/AgenceSrc/k727.jpg";
 import Image8 from "../../assets/AgenceSrc/k728.jpg";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const AgenceHero = () => {
@@ -62,6 +63,10 @@ const AgenceHero = () => {
   })
 
   return (
+
+    <>
+
+    
     <section
       ref={containerRef}
       className="relative min-h-[250vh] overflow-visible py-1"
@@ -133,6 +138,7 @@ const AgenceHero = () => {
         </p>
       </div>
     </section>
+    </>
   );
 };
 

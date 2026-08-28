@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-   <Navbar />
+   {/* <Navbar /> */}
    {/* <Menu /> */}
       <Routes>
         <Route path="/" element={<Home />} />

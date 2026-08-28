@@ -5,9 +5,13 @@ import Footer from "../Components/Footer/Footer.jsx"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image1 from "../assets/ProjectsSrc/projectimag.png";
+import Navbar from "../Components/Navigation/Navbar";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+<Navbar />
 const Projects = () => {
   const container = useRef(null);
 
@@ -87,6 +91,7 @@ const Projects = () => {
   // );
   return (
     <>
+    <Navbar />
     <div className='lg:p-4 p-2 mb-[100vh] h-screen'>
       <div className=' pt-[45vh]'>
         <h2 className="font-['DM_Sans'] lg:text-[12vw] text-7xl uppercase">Projets</h2>
