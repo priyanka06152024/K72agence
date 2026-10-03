@@ -7,10 +7,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
 import Image1 from "../../assets/AgenceSrc/k721.jpg";
-import Image2 from "../../assets/AgenceSrc/k722.jpg";
-import Image3 from "../../assets/AgenceSrc/k723.jpg";
-import Image4 from "../../assets/AgenceSrc/k724.jpg";
-import Image5 from "../../assets/AgenceSrc/k725.jpg";
+import Image2 from "../../assets/AgenceSrc/K722.jpg";
+import Image3 from "../../assets/AgenceSrc/K723.jpg";
+import Image4 from "../../assets/AgenceSrc/K724.jpg";
+import Image5 from "../../assets/AgenceSrc/K725.jpg";
 import Image6 from "../../assets/AgenceSrc/k76.jpg";
 import Image7 from "../../assets/AgenceSrc/k727.jpg";
 import Image8 from "../../assets/AgenceSrc/k728.jpg";
